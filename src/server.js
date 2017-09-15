@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -18,7 +19,7 @@ server.use(session({
   saveUninitialized: false
 }));
 
-// Uncomment when using this server for the client-auth sprint 
+// Uncomment when using this server for the client-auth sprint
 // const corsOptions = {
 //    "origin": "http://localhost:3000",
 //    "credentials": true
@@ -161,6 +162,6 @@ server.get('/restricted/users', (req, res) => {
       return;
     });
 });
-    
 
 module.exports = { server };
+
